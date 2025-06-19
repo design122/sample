@@ -1,0 +1,388 @@
+html, body,
+ul, ol, li,
+h1, h2, h3, h4, h5, h6, p, div {
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Hiragino Kaku Gothic ProN W3', sans-serif;
+  margin:0;
+  padding:0;
+  background-color: #f9f5f1;
+  overflow-x: hidden;
+}
+img,section,div{
+  max-width: 100%;
+  box-sizing:border-box;
+}
+.hero {
+  position:relative;
+  background-image: url(nafinia-putra-Kwdp-0pok-I-unsplash.jpg);
+  background-size:cover;
+  background-position: center;
+  height: 100%;
+justify-content:center;
+  color:white;
+  display: flex;
+  align-items: center;
+  height: 689px;
+}
+.overlay{
+  position: absolute;
+  top:0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(78,52,46,0.3);
+}
+.nav-links{
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  margin: 0;
+
+}
+.nav-links li a {
+  color: #C97B63;
+text-decoration: none;
+font-weight: bold;
+}
+.container{
+  max-width: 1200px;
+  width: 100%;
+  margin: 0auto;
+  display: flex;
+  padding: 0 20px;
+  justify-content: space-between;
+  align-items: center; 
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background-color: #f9f5f1;
+  position: relative;
+  z-index: 10;
+  height: 157px;
+
+}
+@media screen and (max-width: 768px) {
+  .navbar {
+  height: 80px;
+}
+}
+.hamburger {
+  display: none;
+}
+
+.logo{
+  font-size: 36px;
+  color:#C97B63;
+
+}
+@media screen and (max-width: 768px) {
+  .hero{
+    height: 290px;
+  }
+  .nav-links {
+    display: none;
+  }
+  .logo{
+    font-size:22px ;
+  }
+  .hamburger {
+    display: block;
+    font-size: 40px;
+  }
+}
+
+
+.hero-text{
+  position: relative;
+  text-align: center;
+  z-index: 1;
+}
+.hero-text h1{
+  font-size: 48px;
+  margin-bottom: 10px;
+  font-family: Playfair Display;
+}
+.hero-text p{
+  font-size: 24px;
+}
+@media screen and (max-width: 768px) {
+.hero-text h1{
+  font-size: 28px;
+}
+.hero-text p{
+  font-size: 14px;
+}
+}
+.about{
+  background-color:#D7CCC8;
+  height: 285px;
+  position: relative;
+  padding-top: 80px;
+}
+.about-inner {
+max-width: 1200px;
+  margin: 0 auto;
+  height: 100%;
+}
+.about-text{
+  padding-left: 30px;
+}
+.about-text h2{
+ color: #C97B63;
+ font-size: 28px;
+ margin-bottom: 20px;
+ margin-top: 0;
+ padding-top: 0;
+}
+.about-text p{
+  font-size:16px;
+}
+.about-image{
+  position: absolute;
+  right: 150px;
+  bottom: 0;
+}
+.about-image img {
+  width: 160px;
+  height: 240px;
+  object-fit: cover;
+}
+.br-sp {
+  display: none;
+}
+@media screen and (max-width: 768px) {
+.about-text h2{
+  font-size: 22px;
+}
+.about {
+  height: 260px;
+  padding-top:30px ;
+
+}
+
+.about-text {
+  padding-left: 20px;
+}
+
+.about-image img {
+  transform: rotate(90deg);
+  width:100px;
+  height: 160px;
+
+}
+
+.about-image {
+  position: absolute;
+  align-items: flex-end;
+  right: 30px;
+  top:130px;
+}
+
+}
+.menu{
+  background-color:#ffffff;
+}
+.menu-container {
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  box-sizing: border-box;
+}
+
+.menu-section {
+  flex: 1 1 440px;
+  min-width: 300px;
+  max-width: 450px;
+}
+
+.menu-title {
+  font-size: 24px;
+  margin-bottom: 16px;
+  text-align: center;
+  font-weight: lighter;
+}
+
+/* メニューフレームとカード（前回のCSSそのまま） */
+.menu-frame {
+  border: 1px solid #ccc;
+  border-radius: 17px;
+  overflow: hidden;
+  background-color: #ffffff;
+}
+
+.menu-card {
+  display: flex;
+  padding: 30px 20px 20px 40px;
+  align-items: center;
+}
+
+
+
+.menu-image {
+  width: 130px;
+  height: 123px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-right: 15px;
+}
+
+.menu-info {
+  flex: 1;
+}
+
+.menu-name {
+  font-size: 18px;
+  margin: 0 0 4px;
+}
+
+.menu-description {
+  font-size: 14px;
+  color: #666;
+  margin: 0 0 4px;
+}
+
+.menu-price {
+  color: #c14400;
+  font-weight: bold;
+  font-size: 16px;
+}
+.menu-divider {
+  height: 1px;
+  background-color: #D7CCC8;
+  width: 90%;         /* ← 長さを調整する場合はここを変える */
+  margin: 0 auto;
+}
+
+.menu-name1 {  
+  padding-left: 120px;
+  padding-top: 33px;
+}
+@media screen and (max-width: 768px) {
+  .menu-name1 {  
+    padding-left: 30px;
+  }
+}
+
+.menu-name1 h3{
+  font-size: 28px;
+  font-family: Inria Serif;
+  font-weight: lighter;
+.menu-name1 h5{
+  font-size: 16px;
+}}
+
+.access-content {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
+  max-width: 1000px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+
+.access-map {
+  flex: 1;
+  min-width: 280px;
+  
+
+}
+
+.access-info {
+  flex: 1;
+  min-width: 280px;
+  text-align: left;
+  color:#333;
+  font-size:18px;
+  line-height: 2;
+}
+.map-img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  max-width: 400px;
+}
+.section-title{
+  color: #4E342E ;
+  padding-bottom: 20px;
+  padding-left: 120px;
+  font-family: Inria Serif;
+}
+@media screen and (max-width: 768px) {
+  .access-info{
+    text-align: center;
+  }
+  .section-title{
+    padding-left: 150px;
+}
+
+.access-section{
+  padding-top: 33px;
+  padding-bottom: 40px;
+}
+}
+.footer {
+  background-color: #5d4037; /* 深めのブラウン */
+  color: #F9F6F1;
+  padding: 40px 20px 20px;
+  font-size: 14px;
+}
+
+.footer-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.footer-logo {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+
+.footer-sns  {
+ 
+  font-size: 0px;
+  margin: 0 10px;
+  text-decoration: none;
+ 
+}
+
+
+.footer-copy {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 12px;
+  color: #ccc;
+}
+@media screen and (max-width: 768px) {
+.footer{
+height: 140px;
+padding: 10px;
+}
+.footer-copy {
+  text-align: center;
+  margin-top: 0px;
+
+}
+}
